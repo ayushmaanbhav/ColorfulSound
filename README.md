@@ -13,3 +13,6 @@ Animating RGB LEDs using Arduino and Minim (Java)
 ## Youtube videos:
 * https://youtu.be/1_jsy24fjsA
 * https://youtu.be/-lKDS-QsK64
+
+## Note
+Please be careful if you are using using 12V or more LED strip. As arduino is a 5V device, the amount of current a 12V LED strip requires can destroy the arduino. So follow something like this: http://www.instructables.com/id/ARDUINO-CONTROLLED-12v-RGB-LED-STRIP/
