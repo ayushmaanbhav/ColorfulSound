@@ -9,7 +9,7 @@ int g = -1;
 int b = -1;
 
 //uncomment this line if using a Common Anode LED
-#define COMMON_ANODE
+//#define COMMON_ANODE
 
 void setup() {
     Serial.begin(9600);

@@ -119,14 +119,13 @@ public class ArduinoConnector implements SerialPortEventListener {
 			public void run() {
 				try {
 					BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-					BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(main.output));
 					String inp;
 					while (!(inp = br.readLine()).equals("exit")) {
-						bw.write(inp);
-						bw.flush();
+						main.output.write(Integer.parseInt(inp));
+						main.output.flush();
 					}
 					br.close();
-					bw.close();
+					main.output.close();
 				} catch (Exception e) {}
 			}
 		};
