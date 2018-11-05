@@ -8,7 +8,7 @@ Animating RGB LEDs using Arduino and Minim (Java)
 * You'll need RGB LEDs. Normally they operate at 12V.(Read the below note on how the circuit is to be built.)
 * Test the lights if they have common anode or cathode and tweak the common anode comment as required (in arduino code).
 * Start the prog or run the EXE and ENJOY.
-* Dont forget to enable the feedback of your output sound in Volume Control otherwise the program will listen to the microphone by default. In recording devices set feedback sound to default.
+* Dont forget to enable the feedback ('What you hear') of your output sound in Volume Control otherwise the program will listen to the microphone by default. **In recording devices set feedback sound to default**, you can change it back to microphone after you start the program. 
 
 
 ## Youtube videos:
