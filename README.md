@@ -1,5 +1,6 @@
 # ColorfulSound
 Animating RGB LEDs using Arduino and Minim (Java)
+
 Used FFT on the samples and detected beats in the various spectrum ranges, animating the RGBA values based on variety of configurable rules
 
 * Upload the arduino code in ur Arduino see the pin configurations.
