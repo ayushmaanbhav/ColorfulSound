@@ -1,5 +1,6 @@
 # ColorfulSound
 Animating RGB LEDs using Arduino and Minim (Java)
+Used FFT on the samples and detected beats in the various spectrum ranges, animating the RGBA values based on variety of configurable rules
 
 * Upload the arduino code in ur Arduino see the pin configurations.
 * Put the RXTX dlls in windoys system32 or SysWOW64 as given here <a href='http://rxtx.qbang.org/wiki/index.php/Download'>http://rxtx.qbang.org/wiki/index.php/Download</a>
