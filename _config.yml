@@ -1,2 +1,44 @@
-theme: jekyll-theme-midnight
+# ColorfulSound GitHub Pages Configuration
+title: ColorfulSound
+description: Transform your music into a mesmerizing light show with real-time FFT audio analysis and Arduino-controlled RGB LEDs
+url: "https://ayushmaanbhav.github.io"
+baseurl: "/ColorfulSound"
+
+# Analytics
 google_analytics: UA-53900907-2
+
+# SEO
+author: Ayush Jain
+twitter:
+  username: ayushmaanbhav
+social:
+  name: Ayush Jain
+  links:
+    - https://github.com/ayushmaanbhav
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude from build
+exclude:
+  - src/
+  - libraries/
+  - exe/
+  - Arduino/
+  - launch4j/
+  - .classpath
+  - .project
+  - .settings/
+  - "*.jar"
+  - "*.exe"
+  - "*.dll"
+  - "*.so"
+  - "*.jnilib"
+
+# Include in build
+include:
+  - index.html
+  - css/
+  - js/
+  - images/

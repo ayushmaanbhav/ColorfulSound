@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/ayushmaanbhav/ColorfulSound/discussions
+    about: Ask questions and share ideas in GitHub Discussions
+  - name: Documentation
+    url: https://github.com/ayushmaanbhav/ColorfulSound#readme
+    about: Check the README for setup guides and troubleshooting

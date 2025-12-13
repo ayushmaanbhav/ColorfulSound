@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 150" fill="none">
+  <defs>
+    <linearGradient id="spectrum-rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="14%" stop-color="#ff8800"/>
+      <stop offset="28%" stop-color="#ffff00"/>
+      <stop offset="42%" stop-color="#00ff00"/>
+      <stop offset="57%" stop-color="#0088ff"/>
+      <stop offset="71%" stop-color="#4400ff"/>
+      <stop offset="85%" stop-color="#8800ff"/>
+      <stop offset="100%" stop-color="#ff00ff"/>
+    </linearGradient>
+
+    <filter id="spectrum-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="text-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="150" fill="#0a0a0f"/>
+
+  <!-- Main Spectrum Bar -->
+  <g filter="url(#spectrum-glow)">
+    <rect x="50" y="50" width="700" height="30" rx="15" fill="url(#spectrum-rainbow)"/>
+  </g>
+
+  <!-- Frequency Labels -->
+  <text x="50" y="105" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="start">20 Hz</text>
+  <text x="750" y="105" fill="rgba(255,255,255,0.6)" font-size="11" text-anchor="end">20 kHz</text>
+
+  <!-- Arrow -->
+  <g stroke="rgba(255,255,255,0.3)" stroke-width="1">
+    <line x1="50" y1="95" x2="750" y2="95"/>
+    <polygon points="750,95 740,90 740,100" fill="rgba(255,255,255,0.3)"/>
+  </g>
+
+  <!-- Color Markers -->
+  <!-- Red -->
+  <g transform="translate(75, 35)">
+    <circle cy="30" r="6" fill="#ff0000" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text y="0" fill="#ff0000" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">R</text>
+    <text y="60" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle">Bass</text>
+  </g>
+
+  <!-- Orange -->
+  <g transform="translate(175, 35)">
+    <circle cy="30" r="6" fill="#ff8800" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <text y="0" fill="#ff8800" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">O</text>
+  </g>
+
+  <!-- Yellow -->
+  <g transform="translate(275, 35)">
+    <circle cy="30" r="6" fill="#ffff00" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+    <text y="0" fill="#ffff00" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">Y</text>
+  </g>
+
+  <!-- Green -->
+  <g transform="translate(375, 35)">
+    <circle cy="30" r="6" fill="#00ff00" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <text y="0" fill="#00ff00" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">G</text>
+    <text y="60" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle">Mids</text>
+  </g>
+
+  <!-- Blue -->
+  <g transform="translate(475, 35)">
+    <circle cy="30" r="6" fill="#0088ff" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+    </circle>
+    <text y="0" fill="#0088ff" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">B</text>
+  </g>
+
+  <!-- Indigo -->
+  <g transform="translate(575, 35)">
+    <circle cy="30" r="6" fill="#4400ff" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <text y="0" fill="#4400ff" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">I</text>
+  </g>
+
+  <!-- Violet -->
+  <g transform="translate(675, 35)">
+    <circle cy="30" r="6" fill="#8800ff" filter="url(#text-glow)">
+      <animate attributeName="r" values="6;8;6" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+    </circle>
+    <text y="0" fill="#8800ff" font-family="Orbitron, sans-serif" font-size="10" text-anchor="middle" filter="url(#text-glow)">V</text>
+    <text y="60" fill="rgba(255,255,255,0.5)" font-size="8" text-anchor="middle">Treble</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="140" fill="#00ffff" font-family="Orbitron, sans-serif" font-size="11" text-anchor="middle" opacity="0.8">FREQUENCY TO COLOR MAPPING (ROYGBIV)</text>
+
+  <!-- Animated scan line -->
+  <rect x="50" y="50" width="4" height="30" fill="rgba(255,255,255,0.8)" rx="2">
+    <animate attributeName="x" values="50;746;50" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</svg>
