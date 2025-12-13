@@ -18,7 +18,7 @@
 
 ---
 
-<img src="images/icon.png" alt="ColorfulSound Logo" width="120">
+<img src="images/icon.svg" alt="ColorfulSound Logo" width="120">
 
 </div>
 
@@ -392,7 +392,8 @@ ColorfulSound/
 │   ├── ColorfulSound.jar          # Compiled JAR
 │   └── ColorfulSound.exe          # Windows executable
 ├── images/
-│   └── icon.png                   # Application icon
+│   ├── icon.png                   # Application icon (legacy)
+│   └── icon.svg                   # Application icon (scalable)
 ├── launch4j/
 │   └── config.xml                 # EXE wrapper config
 └── docs/

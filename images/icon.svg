@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="100%" stop-color="#1a0a2a"/>
+    </linearGradient>
+
+    <linearGradient id="rainbow" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="16%" stop-color="#ff8800"/>
+      <stop offset="33%" stop-color="#ffff00"/>
+      <stop offset="50%" stop-color="#00ff00"/>
+      <stop offset="66%" stop-color="#00ffff"/>
+      <stop offset="83%" stop-color="#0088ff"/>
+      <stop offset="100%" stop-color="#8800ff"/>
+    </linearGradient>
+
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00ffff"/>
+      <stop offset="100%" stop-color="#0088ff"/>
+    </linearGradient>
+
+    <linearGradient id="neon-magenta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff00ff"/>
+      <stop offset="100%" stop-color="#ff0088"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Inner Shadow -->
+    <filter id="inner-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur"/>
+      <feOffset dx="0" dy="5" result="offsetBlur"/>
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bg-grad)" stroke="url(#rainbow)" stroke-width="4" filter="url(#glow-soft)"/>
+
+  <!-- Inner Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Sound Wave Bars (Equalizer Style) -->
+  <g filter="url(#glow-strong)">
+    <!-- Bar 1 - Red -->
+    <rect x="96" y="236" width="28" height="80" rx="14" fill="#ff0000">
+      <animate attributeName="height" values="80;120;80" dur="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="236;216;236" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 2 - Orange -->
+    <rect x="138" y="196" width="28" height="120" rx="14" fill="#ff8800">
+      <animate attributeName="height" values="120;160;120" dur="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="196;176;196" dur="0.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 3 - Yellow -->
+    <rect x="180" y="156" width="28" height="160" rx="14" fill="#ffff00">
+      <animate attributeName="height" values="160;200;160" dur="0.7s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="156;136;156" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 4 - Green (Center, tallest) -->
+    <rect x="222" y="116" width="28" height="200" rx="14" fill="#00ff00">
+      <animate attributeName="height" values="200;240;200" dur="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="116;96;116" dur="0.4s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 5 - Cyan -->
+    <rect x="264" y="136" width="28" height="180" rx="14" fill="#00ffff">
+      <animate attributeName="height" values="180;220;180" dur="0.55s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="136;116;136" dur="0.55s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 6 - Blue -->
+    <rect x="306" y="176" width="28" height="140" rx="14" fill="#0088ff">
+      <animate attributeName="height" values="140;180;140" dur="0.65s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="176;156;176" dur="0.65s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 7 - Purple -->
+    <rect x="348" y="216" width="28" height="100" rx="14" fill="#8800ff">
+      <animate attributeName="height" values="100;140;100" dur="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="216;196;216" dur="0.5s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Bar 8 - Magenta -->
+    <rect x="390" y="246" width="28" height="70" rx="14" fill="#ff00ff">
+      <animate attributeName="height" values="70;100;70" dur="0.45s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="246;231;246" dur="0.45s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Base Line -->
+  <line x1="80" y1="316" x2="432" y2="316" stroke="url(#rainbow)" stroke-width="3" stroke-linecap="round" filter="url(#glow-soft)"/>
+
+  <!-- Sound Waves (Arcs) -->
+  <g fill="none" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M 440 200 Q 470 256 440 312" stroke="#00ffff" filter="url(#glow-soft)">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 460 180 Q 500 256 460 332" stroke="#00ffff" filter="url(#glow-soft)">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+    </path>
+    <path d="M 72 200 Q 42 256 72 312" stroke="#ff00ff" filter="url(#glow-soft)">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="1s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 52 180 Q 12 256 52 332" stroke="#ff00ff" filter="url(#glow-soft)">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+    </path>
+  </g>
+
+  <!-- Accent Dots -->
+  <circle cx="256" cy="380" r="8" fill="#00ffff" filter="url(#glow-soft)">
+    <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="220" cy="395" r="5" fill="#ff00ff" filter="url(#glow-soft)">
+    <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+  </circle>
+  <circle cx="292" cy="395" r="5" fill="#8800ff" filter="url(#glow-soft)">
+    <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+</svg>
